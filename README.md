@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# Walmart
+Mockup of https://www.walmartgolocal.com/content/go-local/go-local-home.html to showcase how efficient development in Edge Delivery Services is.
 
 ## Environments
 - Preview: https://main--walmart--AdobeDevXSC.hlx.page/

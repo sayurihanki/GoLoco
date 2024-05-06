@@ -16,5 +16,16 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  const section = footer.querySelector('.section');
+  const wrapper = section.querySelector('.default-content-wrapper');
+  
+  // Select all direct children of the wrapper except the first one
+  const childElements = Array.from(wrapper.children).slice(1);
+  const newListDiv = document.createElement('div');
+  newListDiv.classList.add('list');
+
+  childElements.forEach((el) => { newListDiv.appendChild(el) });
+  wrapper.insertBefore(newListDiv, wrapper.children[1])
+
   block.append(footer);
 }

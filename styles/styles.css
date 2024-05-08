@@ -19,6 +19,10 @@
   --dark-color: #ccc;
   --text-color: black;
 
+  --color-white: #fff;
+  --color-yellow: #fbfd37;
+  --bg-color-blue: #2c54f5;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
@@ -38,7 +42,8 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 113px;
+  --mobile-nav-height: 80px;
 }
 
 @font-face {
@@ -71,10 +76,6 @@ body {
 
 body.appear {
   display: block;
-}
-
-header {
-  height: var(--nav-height);
 }
 
 h1, h2, h3,

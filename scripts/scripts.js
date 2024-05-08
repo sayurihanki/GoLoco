@@ -132,4 +132,22 @@ async function loadPage() {
   loadDelayed();
 }
 
+export function makeVideo(element, href) {
+  element.innerHTML = `<video loop muted playsInline>
+    <source data-src="${href}" type="video/mp4" />
+  </video>`;
+
+  const video = element.querySelector('video');
+  const source = element.querySelector('video > source');
+
+  source.src = source.dataset.src;
+  video.load();
+
+  video.addEventListener('loadeddata', () => {
+    video.setAttribute('autoplay', true);
+    video.setAttribute('data-loaded', true);
+    video.play();
+  });
+}
+
 loadPage();

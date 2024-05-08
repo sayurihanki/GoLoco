@@ -1,9 +1,10 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--bg-color-blue);
+  background-color: transparent;
   width: 100%;
   z-index: 2;
   position: fixed;
+  transition: all .5s;
 }
 
 header nav {
@@ -31,10 +32,6 @@ header nav[aria-expanded="true"] {
 }
 
 @media (width <= 768px) {
-  header {
-    height: var(--mobile-nav-height);
-  }
-
   header nav {
     height: var(--mobile-nav-height);
     grid-template:
@@ -47,6 +44,7 @@ header nav[aria-expanded="true"] {
     'brand hamburger' var(--mobile-nav-height)
     'sections sections' 1fr
     'tools tools' var(--mobile-nav-height) / auto 1fr;
+    background-color: var(--bg-color-blue);
   }
 }
 
@@ -342,5 +340,6 @@ header nav .nav-tools .button-container a {
 header nav .nav-tools .button-container a:hover {
   background-color: var(--color-white);
   color: var(--bg-color-blue);
+  outline: 1px solid var(--bg-color-blue);
 }
 

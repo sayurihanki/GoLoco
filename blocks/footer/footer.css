@@ -77,6 +77,10 @@ footer .footer .section .list ul li ul li {
   padding: .25rem 0;
 }
 
+footer .footer .section .list ul li ul li a {
+  color: var(--color-white);
+}
+
 footer .footer .section:last-of-type {
   border-top: 2px solid var(--color-yellow);
   margin: 9rem 0 3rem;

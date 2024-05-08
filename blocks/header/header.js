@@ -86,6 +86,18 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+// Function to change background color to blue
+function changeBackgroundColor() {
+  const navWrapper = document.querySelector('header .nav-wrapper');
+  navWrapper.style.backgroundColor = '#2c54f5';
+}
+
+// Function to reset background color to original
+function resetBackgroundColor() {
+  const navWrapper = document.querySelector('header .nav-wrapper');
+  navWrapper.style.backgroundColor = 'transparent';
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -152,4 +164,21 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+
+  // Variable to track previous scroll position
+  let previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Event listener for scroll event
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > 200 && currentScroll > previousScroll) {
+      changeBackgroundColor();
+    } else if (currentScroll <= 200 && currentScroll < previousScroll) {
+      resetBackgroundColor();
+    }
+
+    previousScroll = currentScroll;
+  });
 }

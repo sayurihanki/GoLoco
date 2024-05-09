@@ -29,3 +29,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* delivery capabbilities */
+.delivery-capabilities .cards ul li {
+  border: none;
+}
+
+.delivery-capabilities .cards ul li .cards-card-body p {
+  font-size: 20px;
+  line-height: normal;
+}

@@ -58,13 +58,11 @@ export default async function decorate(block) {
     const panelChildren = Array.from(wrapperDiv.children);
     panelChildren.forEach((child) => {
       if (child.tagName === 'P' && child.querySelector('img')) {
-        // Skip the first <p> element with an image
         return;
       }
       infoContainer.appendChild(child);
     });
     
-    // panel.innerHTML = '';
     panel.appendChild(infoContainer);
   });
 

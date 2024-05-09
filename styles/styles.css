@@ -209,3 +209,69 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+main .section.center {
+  text-align: center;
+}
+
+main .section.delivery-capabilities h4 {
+  font-size: 40px;
+  font-weight: 400;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+
+@media (width <= 768px) {
+  main .section.delivery-capabilities h4 {
+    font-size: 30px;
+  }
+}
+
+main .section.delivery-capabilities .default-content-wrapper:first-of-type p {
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+}
+
+.delivery-capabilities .default-content-wrapper:last-of-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 5rem;
+}
+
+@media (width <= 768px) {
+  .delivery-capabilities .default-content-wrapper:last-of-type {
+    gap: 1rem;
+  }
+}
+
+.delivery-capabilities .default-content-wrapper:last-of-type p {
+  margin: 0;
+}
+
+.delivery-capabilities .default-content-wrapper:last-of-type p a {
+  margin: 0;
+  min-width: 250px;
+  font-size: 18px;
+  padding: 0.5rem 0;
+}
+
+.delivery-capabilities .default-content-wrapper:last-of-type p:first-of-type a,
+.delivery-capabilities .default-content-wrapper:last-of-type p:last-of-type a:hover {
+  background-color: var(--bg-color-blue);
+  color: var(--color-white);
+}
+
+.delivery-capabilities .default-content-wrapper:last-of-type p:last-of-type a,
+.delivery-capabilities .default-content-wrapper:last-of-type p:first-of-type a:hover {
+  background-color: var(--color-white);
+  color: var(--bg-color-blue);
+  outline: 1px solid var(--bg-color-blue);
+}

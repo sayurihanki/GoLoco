@@ -15,7 +15,7 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: white;
-  --light-color: #eee;
+  --light-color: #ebf1ff;
   --dark-color: #ccc;
   --text-color: black;
 
@@ -177,8 +177,8 @@ main img {
 
 .icon {
   display: inline-block;
-  height: 24px;
-  width: 24px;
+  height: 100px;
+  width: 100px;
 }
 
 .icon img {
@@ -203,7 +203,8 @@ main .section {
     margin: auto;
   }
 
-  .section.video-container > div {
+  .section.video-container > div,
+  .section.tabs-container > div {
     max-width: 1300px;
   }
 }
@@ -252,7 +253,7 @@ main .section.delivery-capabilities .default-content-wrapper:first-of-type p {
 
 @media (width <= 768px) {
   .delivery-capabilities .default-content-wrapper:last-of-type {
-    gap: 0rem;
+    gap: 1rem;
     margin-top: 2rem;
   }
 }

@@ -211,8 +211,12 @@ main .section {
 
 /* section metadata */
 main .section.light,
-main .section.highlight {
+main .section.light-highlight {
   background-color: var(--light-color);
+}
+
+main .section.blue-highlight {
+  background-color: var(--bg-color-blue);
 }
 
 main .section.center {

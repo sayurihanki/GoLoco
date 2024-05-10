@@ -5,7 +5,7 @@ export default async function decorate(block) {
   decorateIcons(block);
   
   if (Object.values(block.classList).includes('video')) {
-    const videoSrc = block.querySelector('div > p > a');
+    const videoSrc = block.querySelector('div > a');
 
     if(videoSrc.href.includes(window.hlx.codeBasePath)) {
       videoSrc.href = videoSrc.text;

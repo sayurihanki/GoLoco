@@ -285,3 +285,14 @@ main .section.delivery-capabilities .default-content-wrapper:first-of-type p {
   color: var(--bg-color-blue);
   outline: 1px solid var(--bg-color-blue);
 }
+
+/* Experimentation Widget Styling */
+.hlx-preview-overlay .hlx-badge {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.hlx-preview-overlay .hlx-badge .hlx-popup * {
+  font-size: 14px;
+}

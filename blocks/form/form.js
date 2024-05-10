@@ -384,6 +384,13 @@ async function createForm(formURL) {
   const transformRequest = await applyTransformation(data, form);
   // eslint-disable-next-line prefer-destructuring
   form.dataset.action = pathname?.split('.json')[0];
+
+
+  const selectElement = form.querySelector('select');
+  if (selectElement) {
+    selectElement.selectedIndex = 0;
+  }
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.submitter.setAttribute('disabled', '');
@@ -408,7 +415,7 @@ function loadUEScripts() {
   head.appendChild(componentDefinition);
 }
 
-export default async function decorate(block) {    
+export default async function decorate(block) {
   const formLink = block.querySelector('a[href$=".json"]');
   if (formLink) {
     loadUEScripts();

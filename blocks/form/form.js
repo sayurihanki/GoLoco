@@ -59,7 +59,9 @@ async function submitForm(form, transformer) {
       body,
     });
     if (response.ok) {
-      window.location.href = form.dataset?.redirect || 'thankyou';
+      // window.location.href = form.dataset?.redirect || 'thankyou';
+      const submitBtn = document.getElementById('submit');
+      submitBtn.textContent = 'Submitted';
     } else {
       const error = await response.text();
       throw new Error(error);
@@ -406,7 +408,7 @@ function loadUEScripts() {
   head.appendChild(componentDefinition);
 }
 
-export default async function decorate(block) {  
+export default async function decorate(block) {    
   const formLink = block.querySelector('a[href$=".json"]');
   if (formLink) {
     loadUEScripts();

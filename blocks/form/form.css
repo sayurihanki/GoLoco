@@ -63,10 +63,24 @@ main .form-container {
     flex-direction: row;
 }
 
-main .form-container div {
+main .form-container > div {
     max-width: unset;
     margin: unset;
     padding: 0 2rem;
+}
+
+main .form form {
+    gap: 1.5rem 1rem;
+}
+
+main .form br {
+    display: none;;
+}
+
+main .form h4 {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 main .form-container > .default-content-wrapper {
@@ -78,6 +92,14 @@ main .form-container > .form-wrapper {
     width: 65%;
 }
 
+main .form-container .form.block {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 3rem;
+}
+
 main .form-container > .default-content-wrapper h4 {
     font-size: 40px;
     font-weight: 400;
@@ -86,6 +108,35 @@ main .form-container > .default-content-wrapper h4 {
 main .form-container > .default-content-wrapper > p:first-of-type {
     font-size: 20px;
     font-weight: 300;
+}
+
+main .form form .field-wrapper[data-editor-itemmodel="text"] label,
+main .form form .field-wrapper[data-editor-itemmodel="email"] label {
+    display: none;
+}
+
+main .form input,
+main .form select {
+    border-radius: 5px;
+}
+
+main .form .form-select {
+    text-align: left;
+}
+
+main .form .form-select label {
+    font-size: 12px;
+}
+
+main .form label[for="agreement"] {
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    padding-right: 40%;
+}
+
+main .form .form-submit {
+    text-align: right;
 }
 
 @media (width <= 900px) {
@@ -104,6 +155,10 @@ main .form-container > .default-content-wrapper > p:first-of-type {
     main .form-container div {
         padding: 0;
     }
+
+    main .form label[for="agreement"] {
+        padding-right: 0;
+    }
 }
 
 /* End of custom */
@@ -112,14 +167,9 @@ main .form {
     background-color: var(--form-background-color);
 }
 
-main .form > div:not(:first-child) {
-    display: none;
-}
-
 main .form form {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
     align-items: start;
 }
 
@@ -141,7 +191,7 @@ main .form .field-description {
 main .form input, main .form textarea, main .form select {
     background-color: var(--form-input-background-color);
     border: var(--form-input-border-size) solid var(--form-input-border-color);
-    width: 100%;
+    width: -webkit-fill-available;
     height: 42px;
     color: var(--form-label-color);
     padding: var(--form-input-padding);
@@ -236,18 +286,20 @@ input::file-selector-button {
 }
 
 main .form button {
-    color: var(--form-button-color);
-    background: var(--form-button-background-color);
-    border: var(--form-button-border);
-    padding: var(--form-button-padding);
-    font-size: var(--form-button-font-size);
-    font-weight: var(--mt-font-weight-bold);
-    border-radius: unset;
-    width: 100%;
+    background-color: #2c54f5;
+    border: 1px solid #2c54f5;
+    color: #fff;
+    padding: 16px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 200px;
+    min-height: 50px;
+    margin: 0;
 }
 
 main .form button:hover {
-    background: var(--form-button-background-hover-color);
+    background-color: #fff;
+    color: #2c54f5;
 }
 
 main .form-submit-wrapper{

@@ -97,7 +97,7 @@ main .form-container .form.block {
     border-radius: 20px;
     width: auto;
     height: auto;
-    padding: 3rem;
+    padding: 3rem 5rem;
 }
 
 main .form-container > .default-content-wrapper h4 {

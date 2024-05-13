@@ -391,6 +391,22 @@ async function createForm(formURL) {
     selectElement.selectedIndex = 0;
   }
 
+  const inputElements = form.querySelectorAll('input[type="text"], input[type="email"]');
+
+  inputElements.forEach((inputElement) => {
+      const parentDiv = inputElement.parentElement;
+  
+      inputElement.addEventListener('focus', () => {
+          parentDiv.classList.add('focused');
+      });
+  
+      inputElement.addEventListener('blur', () => {
+          if (!inputElement.value.trim()) {
+              parentDiv.classList.remove('focused');
+          }
+      });
+  });
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.submitter.setAttribute('disabled', '');

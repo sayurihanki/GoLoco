@@ -81,6 +81,7 @@ main .form h4 {
     font-size: 32px;
     text-align: left;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 main .form-container > .default-content-wrapper {

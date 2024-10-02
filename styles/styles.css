@@ -46,6 +46,17 @@
   --mobile-nav-height: 80px;
 }
 
+element.style {
+  background-color: rgb(245, 121, 44);
+}
+header .nav-wrapper {
+  background-color: transparent;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  transition: all .5s;
+}
+
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 100.06%;

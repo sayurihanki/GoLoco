@@ -12,16 +12,16 @@
 
 :root {
   /* colors */
-  --link-color: #fb623b;
-  --link-hover-color: #f6c513;
+  --link-color: #db5e40;
+  --link-hover-color: #f6d013;
   --background-color: white;
-  --light-color: #c6ceff;
+  --light-color: #6f9ed4;
   --dark-color: #ccc;
   --text-color: black;
 
   --color-white: #fff;
   --color-yellow: #fbfd37;
-  --bg-color-blue: #f5d72c;
+  --bg-color-blue: #2c54f4;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;

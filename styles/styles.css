@@ -228,7 +228,7 @@ main .section.light-highlight {
 
 main .section.yellow,
 main .section.yellow-highlight {
-  background-color: var(--yellow-color);
+  background-color: var(--color-yellow);
 }
 
 main .section.blue-highlight {

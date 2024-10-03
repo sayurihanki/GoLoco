@@ -20,7 +20,7 @@
   --text-color: black;
 
   --color-white: #fff;
-  --color-yellow: #fbfd37;
+  --color-yellow: #fdcf37;
   --bg-color-blue: #2c54f4;
 
   /* fonts */
@@ -224,6 +224,11 @@ main .section {
 main .section.light,
 main .section.light-highlight {
   background-color: var(--light-color);
+}
+
+main .section.yellow,
+main .section.yellow-highlight {
+  background-color: var(--yellow-color);
 }
 
 main .section.blue-highlight {
